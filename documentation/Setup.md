@@ -119,7 +119,7 @@ Extract the flutter zip file to the location and rename it to "flutter"
 
 ## Android Virtual Device
 
-Try Android Studio, if it doesn't work try the other option.
+Try Android Studio, if it doesn't work try the terminal option.
 
 ### From Android Studio
 1. Open Android Studio and click **More Actions**, and then click **AVD Manager**.
@@ -131,14 +131,15 @@ Try Android Studio, if it doesn't work try the other option.
 7. Close Android Studio and restart any open terminal window or code editor.
 
 ### From Command Line
-1. In the terminal, run `advmanager list`. Find the device you want to emulate from the list and keep track of **id**. Example:
+1. Navigate to `%ANDROID_SDK_ROOT%\cmdline-tools\tools\bin` folder, right click and select **Open in Terminal**.
+2. In the terminal, run `.\avdmanager list`. Find the device you want to emulate from the list and keep track of **id**. Example:
     ```
     id: 30 or "pixel 7 pro"
         Name: Pixel 7 Pro
         OEM : Google
     ```
-2. Think of a good name for the device. Example: `pixel-7-pro`.
-3. In terminal:
+3. Think of a good name for the device. Example: `pixel-7-pro`.
+4. In terminal:
    `avdmanager create avd -n {name} -k "{image}" -d {id}`
    Example: `avdmanager create avd -n pixel-7-pro -k "system-images;android-33;google_apis;x86_64" -d 30`
 
@@ -175,7 +176,6 @@ Try Android Studio, if it doesn't work try the other option.
     - Better Comments
 
 # Running the App
-Prefer CLI over GUI.
 
 ## CLI
 1. Open Project Folder in terminal by hitting `~` in VSCode.
