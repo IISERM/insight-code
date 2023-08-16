@@ -27,12 +27,16 @@
 4. Create a pull request when you are done with your work.
    - If you need help with creating a pull request, please contact anyone in the team.
    - You will be asked to make changes to your pull request if there are any issues (most probably due to style guide).
+   - Try to reference the issue number in the pull request description.
 
 ## Actual Contributing
 1. Create a fork of the repository. Make sure to include all branches.
 2. Write and commit your code to your own branch.
+   - Prefer to use [gitmoji](https://gitmoji.dev) for commit messages.
 3. Create a pull request to the `dev` branch of the main IISERM repository.
+   - Prefer to use [gitmoji](https://gitmoji.dev) for pull request titles.
 4. Wait for the pull request to be reviewed and merged.
    - During the review process, you may be asked to make changes to your code. Please do so.
    - If you need help with making changes, please contact anyone in the team.
+   - The core maintainers might be busy, so please ask them to review your pull request.
 5. The pull request will be merged to the `dev` branch and will only be merged to the `main` branch during the next release.
