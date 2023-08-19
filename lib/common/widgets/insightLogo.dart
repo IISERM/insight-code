@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class insightLogo extends StatelessWidget {
-  const insightLogo({
+class InsightLogo extends StatelessWidget {
+  const InsightLogo({
     Key? key,
     this.height,
     this.width
