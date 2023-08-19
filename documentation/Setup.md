@@ -175,6 +175,16 @@ Try Android Studio, if it doesn't work try the terminal option.
     - Flutter Snippets
     - Better Comments
 
+
+# Confirming Setup
+1. Launch emulator by running `emulator -avd {name}` in terminal.
+2. In a seperate terminal, navigate to a folder where you want to create the project. Example: `cd D:\dev\test\`. *We will be deleteing this later*
+3. Run `flutter create {name}`. Example: `flutter create test`.
+    - This creates a flutter project with the name you provided.
+    - It is an example project with a counter app.
+4. Run `cd {name}`. Example: `cd test`.
+5. Run `flutter run`. This should launch the app in the emulator.
+
 # Running the App
 
 ## CLI

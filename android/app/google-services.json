@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "336710432752",
+    "project_id": "insight-turing",
+    "storage_bucket": "insight-turing.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336710432752:android:1936915971dd2e46488f35",
+        "android_client_info": {
+          "package_name": "club.turing.insight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336710432752-a0sgle6387ja6k3f8iuvbk39gk6b9jus.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "club.turing.insight",
+            "certificate_hash": "687ba01bd9050944c269f165fedaed1230d8f7d8"
+          }
+        },
+        {
+          "client_id": "336710432752-oprrn8k8gnnj9cpqjrskcm6d9l3klth3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu5pswIlxZAJxonjNABEO0377mFraZYvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336710432752-oprrn8k8gnnj9cpqjrskcm6d9l3klth3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "336710432752-ctro1fhkdje4urtsr4mfuk6umv6pqu2s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "club.turing.insight"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

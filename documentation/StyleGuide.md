@@ -43,6 +43,11 @@ Any line with the word *prefer* is a rule that **should** be followed if possibl
 - Every theme should have its own file inside the `themes` folder. Example: `themes/defaultLightTheme.dart`.
 
 ## Coding Structure
+- Prefer to use `const` over `final` for variables that are supposed to be constant. [README](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))
+- Prefer `final` variables over `var` variables.
+- Never use `dynamic` as a variable type. Always use a specific type instead.
+- Prefer to use Dart 's pre-defined types instead of using custom types.
+- Use [composition](https://stackify.com/oop-concepts-composition/) rather than [inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)), when creating new data models.
 - If the indentation is not set to 2 spaces, set it to 2 spaces.
 - If the indentation level is more than 5, refactor the code.
   - Abstract the code into smaller widgets or functions.
