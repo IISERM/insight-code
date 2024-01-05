@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:insight/commons/models/custom_errors.dart';
 import 'package:insight/commons/widgets/loading_handlers.dart';
 import 'package:insight/features/auth/interface/widgets/auth_checker.dart';
+import 'package:insight/themes/catppuccin.dart';
 import 'commons/widgets/error_handlers.dart';
 import 'config/firebase_options.dart';
 
@@ -14,6 +15,7 @@ void main() {
 
 final firebaseInitializerProvider = FutureProvider<FirebaseApp>((ref) async {
   return await Firebase.initializeApp(
+      name: 'Insight',
       options: DefaultFirebaseOptions.currentPlatform);
 });
 
@@ -24,6 +26,7 @@ class Insight extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final firebaseInit = ref.watch(firebaseInitializerProvider);
     return MaterialApp(
+      theme: CatppuccinTheme(Flavors.mocha, AccentColor.teal),
       debugShowCheckedModeBanner: true,
       home: firebaseInit.when(
         data: (data) => const AuthChecker(),
