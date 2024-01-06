@@ -1,11 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:insight/commons/models/custom_errors.dart';
-import 'package:insight/commons/widgets/loading_handlers.dart';
-import 'package:insight/features/auth/interface/widgets/auth_checker.dart';
-import 'package:insight/themes/catppuccin.dart';
+import 'features/auth/interface/widgets/auth_checker.dart';
+import 'themes/catppuccin.dart';
+import 'commons/models/custom_errors.dart';
 import 'commons/widgets/error_handlers.dart';
+import 'commons/widgets/loading_handlers.dart';
 import 'config/firebase_options.dart';
 
 void main() {
@@ -15,12 +15,11 @@ void main() {
 
 final firebaseInitializerProvider = FutureProvider<FirebaseApp>((ref) async {
   return await Firebase.initializeApp(
-      name: 'Insight',
-      options: DefaultFirebaseOptions.currentPlatform);
+      name: 'Insight', options: DefaultFirebaseOptions.currentPlatform);
 });
 
 class Insight extends ConsumerWidget {
-  const Insight({Key? key}) : super(key: key);
+  const Insight({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -31,7 +30,8 @@ class Insight extends ConsumerWidget {
       home: firebaseInit.when(
         data: (data) => const AuthChecker(),
         loading: () => const LoadingDialogue(),
-        error: (e, stackTrace) => ErrorDialogue(RiverpodError(e, stackTrace: stackTrace)),
+        error: (e, stackTrace) =>
+            ErrorDialogue(RiverpodError(e, stackTrace: stackTrace)),
       ),
     );
   }

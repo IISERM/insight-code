@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:insight/commons/widgets/insight_logo_image.dart';
+import 'package:insight/commons/widgets/loading_handlers.dart';
+import 'package:insight/features/auth/interface/widgets/guest_login_button.dart';
 import 'package:insight/features/auth/interface/widgets/institute_login_button.dart';
 
-class LoginPage extends StatefulWidget {
+class LoginPage extends ConsumerStatefulWidget {
 
-  const LoginPage({Key? key}): super(key: key);
+  const LoginPage({super.key});
 
   @override
   _LoginPageState createState() => _LoginPageState();
 
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginPageState extends ConsumerState<LoginPage> {
 
   bool _isLoading = false;
+
+  void initState() {
+    super.initState();
+  }
 
   void _switchLoading() {
     setState(() {
@@ -29,11 +36,12 @@ class _LoginPageState extends State<LoginPage> {
       body: SafeArea(
         child: Container(
           decoration: loginPageContainerDecoration,
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const InsightLogoImage(),
+              InsightLogoImage(),
               InstituteLoginButton(),
+              GuestLoginButton(),
             ],
           ),
         )
