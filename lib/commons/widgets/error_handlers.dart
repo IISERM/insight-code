@@ -11,15 +11,16 @@ class ErrorDialogue extends AlertDialog {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: const Text("Error!"),
-      content: Column(
+      content: SingleChildScrollView(child: Column(
         children: [
           const Text(r"Something went wrong! Sorry about this :("),
+          Text((error as dynamic).stackTrace.toString()),
           const Text(
               "If you want to help us fix this, please report this error."),
           getErrorButtons(error),
         ],
       ),
-    );
+)    );
   }
 
   ButtonBar getErrorButtons(Object error) {

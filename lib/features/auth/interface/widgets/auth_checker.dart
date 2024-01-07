@@ -13,15 +13,15 @@ class AuthChecker extends ConsumerWidget {
   const AuthChecker({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref){
-
+  Widget build(BuildContext context, WidgetRef ref) {
     final authState = ref.watch(authStateProvider);
+    print(authState);
     return authState.when(
       data: (data) => data == null ? const LoginPage() : const HomePage(),
       loading: () => const LoadingDialogue(),
-      error: (e, stackTrace) => ErrorDialogue(RiverpodError(e, stackTrace: stackTrace)),
+      error: (e, stackTrace) =>
+          ErrorDialogue(RiverpodError(e, stackTrace: stackTrace)),
       //TODO: Find out why I have to use Custom Error instead of error from dart:core
     );
-
   }
 }
